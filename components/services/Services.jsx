@@ -1,30 +1,48 @@
+import ServiceCard from "./ServiceCard";
+import { useState } from "react";
+
 function Services () {
+
+  const {selectedService, setSelectedService} = useState(null);
     const services = [
         { title:"Childcare",
-          description: ""
+          description: "",
+          icon: ""
         },
         { title: "Housekeeping",
-          description: ""
+          description: "",
+          icon: ""
         },
         { title:"Senior Care",
-          description:""
+          description:"",
+          icon: ""
         },
         { title:"Personal Assistance",
-          description:""
+          description:"",
+          icon: ""
         },
         { title: "Home Maintenance",
-        description: "" 
+        description: "",
+        icon: ""
         },
+
+
+      function handleLearnMore() {
+        setSelectedService(service);
+      }
 ];
     return (
         <>
         {services.map((service) => (
-            <div key={service.title}>
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
-            </div>
-        ))
+          <ServiceCard
+          key={service.title}
+          service={service}
+          onLearnMore={() => handleLearnMore(service)}
+          />
+           ))
         }
+           {selectedService && (<p>You Selected: {selectedService.title}</p>  
+          )}
         </>
     );
 }
