@@ -32,7 +32,7 @@ function FAQ () {
     ]
 
     return (
-        <section className="w-full max-w-3xl mx-auto">\
+        <section className="w-full max-w-3xl mx-auto">
         <h2 className="mb-8 text-3x1 font-semibold">
           Frequently Asked Questions
         </h2>
