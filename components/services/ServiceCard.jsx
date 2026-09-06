@@ -4,7 +4,11 @@ function ServiceCard ( {service, onLearnMore }) {
         <span>{service.icon}</span>
         <h3>{service.title}</h3>
         <p>{service.description}</p>
-        <button onClick={onLearnMore}>Learn More</button>
+        <button 
+        className="bg-black text-white px-4 py-2"
+        onClick={onLearnMore}>
+            Learn More
+            </button>
         </div>
     )
 }

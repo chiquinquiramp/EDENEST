@@ -32,7 +32,7 @@ function Services () {
       }
 ];
     return (
-        <>
+        <section>
         {services.map((service) => (
           <ServiceCard
           key={service.title}
@@ -43,7 +43,7 @@ function Services () {
         }
            {selectedService && (<p>You Selected: {selectedService.title}</p>  
           )}
-        </>
+        </section>
     );
 }
 export default Services;
