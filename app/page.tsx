@@ -8,14 +8,16 @@ import Contact from "@/components/contact/Contact";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div>
       <Navbar />
-      <Hero />
-      <WhyEdenest />
-      <HowItWorks />
-      <Services />
-      <FAQ />
-      <Contact />
+      <main className="flex flex-1 flex-col bg-zinc-50 font-sans dark:bg-black">
+        <Hero />
+        <WhyEdenest />
+        <HowItWorks />
+        <Services />
+        <FAQ />
+        <Contact />
+      </main>
     </div>
   );
 }

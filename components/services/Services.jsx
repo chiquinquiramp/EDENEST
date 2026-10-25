@@ -1,3 +1,4 @@
+"use client";
 import ServiceCard from "./ServiceCard";
 import { useState } from "react";
 
