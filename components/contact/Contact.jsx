@@ -6,7 +6,7 @@ function Contact () {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [submitted, setSubmitted] = useState (false);
+    const [status, setStatus] = useState ("idle");
 
     function handleSubmit (event) {
 
@@ -14,8 +14,7 @@ function Contact () {
         console.log(name);
         console.log(email);
         console.log(message);
-
-        setSubmitted(true);
+        setStatus("submitting");
     }
     return (
         <>
@@ -24,6 +23,7 @@ function Contact () {
         <input 
         id="name" 
         type="text"
+        required
         value={name}
         onChange={(event) => setName(event.target.value)} 
         />
@@ -31,19 +31,30 @@ function Contact () {
         <input
         id="email"
         type="email"
+        required
         value={email}
         onChange={(event) => setEmail(event.target.value)}
         />
      <label htmlFor="message">Message</label>
         <textarea
         id="message"
+        required
         value={message}
         onChange={(event) => setMessage(event.target.value)}
         />
-        <button type="submit">Send Message</button>
+        <button 
+                type="submit" 
+                disabled={status === "submitting"}
+        >
+            {status === "submitting" ? "Sending..." : "Send Message"}</button>
+            
         </form>
-        {submitted && (
+        {status === "success" && (
             <p>Thanks! Your Message has been received.</p>
+        )
+        }
+        {status === "error" && (
+            <p>We couldn't send your message. Please try again.</p>
         )}
         </>
     );
