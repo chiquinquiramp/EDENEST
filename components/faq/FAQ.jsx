@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -49,6 +48,7 @@ function FAQ() {
                         type="button"
                         className="flex w-full items-center justify-between text-left"
                         aria-expanded={openQuestion === question.id}
+                        aria-controls={`faq-answer-${question.id}`}
                         onClick={() =>
                             setOpenQuestion(
                                 openQuestion === question.id
@@ -58,13 +58,17 @@ function FAQ() {
                         }
                     >
                         <span>{question.question}</span>
+
                         <span>
                             {openQuestion === question.id ? "-" : "+"}
                         </span>
                     </button>
 
                     {openQuestion === question.id && (
-                        <p className="mt-3 text-zinc-600">
+                        <p
+                            id={`faq-answer-${question.id}`}
+                            className="mt-3 text-zinc-600"
+                        >
                             {question.answer}
                         </p>
                     )}
