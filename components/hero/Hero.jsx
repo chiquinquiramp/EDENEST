@@ -13,14 +13,16 @@ function Hero () {
 
     <div className="flex flex-col sm:flex-row gap-4">
         <button type="button"
-        className="bg-edenest-green text-foreground font-semibold px-6 py-3 rounded-lg
-        hover:bg-edenest-green/80 transition-colors duration-200">
+        className="bg-edenest-green text-[#292b25] font-semibold px-6 py-3 rounded-lg
+        hover:bg-edenest-green/80 transition-colors duration-200
+        focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground">
             Find Trusted Help
             </button>
         
         <button type="button"
         className="border border-edenest-green text-foreground font-semibold px-6 py-3 rounded-lg
-        hover:bg-edenest-green/10 transition-colors duration-200">
+        hover:bg-edenest-green/10 transition-colors duration-200
+        focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground">
             Find Opportunities</button>
 
     </div>
