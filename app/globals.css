@@ -36,7 +36,7 @@
   --color-edenest-white: var(--edenest-white);
   --color-edenest-sand: var(--edenest-sand);
 
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-dmsi -sans);
   --font-mono: var(--font-geist-mono);
 }
 
