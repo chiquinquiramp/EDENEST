@@ -4,7 +4,7 @@ import HeroVisual from "./HeroVisual";
 function Hero () {
     return (
         <section className="container mx-auto min-h-screen flex flex-col justify-center items-center gap-4 px-4">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground ">
+        <h1 className="font-brand text-5xl md:text-7xl font-bold tracking-tight text-foreground ">
             EDENEST
             </h1>
         <p className="text-lg md:text-xl text-foreground/70 text-center">
