@@ -11,16 +11,16 @@ function Hero () {
             Where trust finds the right people.
             </p>
 
-    <div className="flex flex-col sm:flex-row gap-4">
+    <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
         <button type="button"
-        className="bg-edenest-green text-[#292b25] font-semibold px-6 py-3 rounded-lg
+        className="w-full sm:w-auto bg-edenest-green text-[#292b25] font-semibold px-6 py-3 rounded-lg
         hover:bg-edenest-green/80 transition-colors duration-200
         focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground">
             Find Trusted Help
             </button>
         
         <button type="button"
-        className="border border-edenest-green text-foreground font-semibold px-6 py-3 rounded-lg
+        className="w-full sm:w-auto border border-edenest-green text-foreground font-semibold px-6 py-3 rounded-lg
         hover:bg-edenest-green/10 transition-colors duration-200
         focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground">
             Find Opportunities</button>

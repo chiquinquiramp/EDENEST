@@ -1,30 +1,68 @@
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #292b25;
+/* =================================
+   EDENEST — LIGHT MODE
+================================= */
 
-  --edenest-green:#b2e79f;
-  --edenest-white:#ffffff;
-  --edenest-sand:#cdb58d;
+:root {
+  color-scheme: light;
+
+  /* Base colors */
+  --background: #ffffff;
+  --foreground: #171914;
+  --surface: #f7f7f2;
+  --border: #e8e8e1;
+
+  /* Brand colors */
+  --edenest-green-primary: #90cf8e;
+  --edenest-green-secondary: #c6edc3;
+  --edenest-white: #ffffff;
+  --edenest-sand: #cdb58d;
 }
+
+/* =================================
+   TAILWIND THEME
+================================= */
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-edenest-green: var(--edenest-green);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+
+  --color-edenest-green: var(--edenest-green-primary);
+  --color-edenest-green-secondary: var(--edenest-green-secondary);
   --color-edenest-white: var(--edenest-white);
   --color-edenest-sand: var(--edenest-sand);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
+
+/* =================================
+   EDENEST — DARK MODE
+================================= */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #292b25;
-    --foreground: #ffffff;
+    color-scheme: dark;
+
+    /* Base colors */
+    --background: #171914;
+    --foreground: #f7f7f2;
+    --surface: #252920;
+    --border: #41443b;
+
+    /* Brand colors */
+    --edenest-green-primary: #78b978;
+    --edenest-green-secondary: #a5d5a1;
   }
 }
+
+/* =================================
+   GLOBAL STYLES
+================================= */
 
 body {
   background: var(--background);
