@@ -1,6 +1,10 @@
 
 @import "tailwindcss";
 
+button {
+  font-size: 16px;
+}
+
 /* =================================
    EDENEST — LIGHT MODE
 ================================= */
@@ -36,7 +40,7 @@
   --color-edenest-white: var(--edenest-white);
   --color-edenest-sand: var(--edenest-sand);
 
-  --font-sans: var(--font-dm -sans);
+  --font-sans: var(--font-dm-sans);
   --font-mono: var(--font-geist-mono);
   --font-brand: var(--font-geist-sans);
   
