@@ -3,8 +3,8 @@ function WhyEdenest () {
 
     const reasons = [
         {
-        title: "",
-        description: "..."
+        title: "Verified Professionals",
+        description: "Every professional must complete our required verification process before being listed."
     },
     {
         title: "",
